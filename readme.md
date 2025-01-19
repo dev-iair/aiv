@@ -1,4 +1,10 @@
 ## Install
+- Set Config
+```bash
+# DB Config
+./server/.env.prod
+./docker-compose.prd.yaml # environment, port 변경
+```
 - Server install
 ```bash
 docker-compose -f docker-compose.prd.yaml up 
