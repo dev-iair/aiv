@@ -8,6 +8,11 @@ docker-compose -f docker-compose.prd.yaml up
 cd client
 pip install .
 ```
+## Usage
+- Server API Document
+```bash
+http://host:8000/docs
+```
 ## Sample Code
 ```python
 from train_db import Client
