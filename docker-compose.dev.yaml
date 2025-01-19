@@ -1,0 +1,32 @@
+services:
+  api:
+    image: python:3.11
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./server:/app
+    depends_on:
+      - db
+  client:
+    image: python:3.11
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./client:/app
+    depends_on:
+      - api
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydatabase
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
