@@ -5,7 +5,8 @@ docker-compose -f docker-compose.prd.yaml up
 ```
 - Client install
 ```bash
-pip install git+
+cd client
+pip install .
 ```
 ## Sample Code
 ```python
@@ -56,7 +57,7 @@ print(get_artifact)
 ```
 
 ## Architecture
-![Architecture Diagram]()
+![Architecture Diagram](https://github.com/dev-iair/aiv/blob/master/etc/arch.png?raw=true)
 
 ## Database
-![Database Diagram]()
+![Database Diagram](https://github.com/dev-iair/aiv/blob/master/etc/db.png?raw=true)
